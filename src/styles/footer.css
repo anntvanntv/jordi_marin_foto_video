@@ -1,0 +1,23 @@
+
+footer {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    min-height: 50px;
+}
+.nav-list-footer {
+    display: flex;
+    justify-content: center;
+}
+.nav-list-footer ul li {
+    margin: auto 10px;
+}
+
+@media (max-width: 540px) {
+    .nav-list-footer {
+        flex-direction: column;
+        align-items:  center;
+    }
+    footer .nav-list-footer ul:last-child li  {
+        margin-bottom: 45px;
+    }
+}

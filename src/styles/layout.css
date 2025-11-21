@@ -1,0 +1,32 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    display:flex;
+    justify-content: center;
+}
+/* :root {
+    display: flex;
+  justify-content: center;
+}
+ */
+
+li a, li a {
+    line-height: 30px;
+    font-size: 16px;
+    color: var(--li-color);
+    transition: all 0.3s ease;
+ }
+ ul li {
+     list-style: none;
+ }
+ a {
+     text-decoration: none;
+     font-weight: 300;
+ }
+ a:hover {
+     opacity: 0.5;
+ }
+
+
+
+ 

@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --h1-color: #000000b2;
+    --secondary-color: #ff9800;
+    --font-family: 'Lato', sans-serif; 
+    --li-color: #999a98;   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+header {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.041);
+  position: sticky;
+  top: 30px;
+  height: 100px;
+  
+}
+.altura-header {
+    height: 100px;
+}
+.altura-header a:hover {
+    opacity: initial;
+}
+header h1 {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--h1-color);
+    position: fixed;
+    left: 47.5%;
+    top: 70px;
+}
+.altura-header p{
+   display:none; 
+}
+
+
+
+@media (max-width:660px) {
+    header h1 {
+        left:38.5%;
+    }
+}
+@media (max-width: 547px) {
+    header h1  {
+        font-size: 16px;
+    }
+}
+@media (max-width: 540px) {
+   .altura-header {
+        height: 30px;
+    }
+    .altura-header p{
+        color: #07060699;
+        display:inherit;
+        position:fixed;
+        right: 25px;
+        top: 65px;
+        display: block;
+     }
+     .altura-header p:hover {
+         cursor:pointer;
+     
+     }
+} 
