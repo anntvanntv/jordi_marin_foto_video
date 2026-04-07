@@ -3,14 +3,14 @@ import { MainLayout } from './layout/MainLayout';
 import { Home } from './pages/Home';
 import { Bio } from './pages/Bio';
 import { Contact } from './pages/Contact';
-import { PhotoEditorial } from './pages/photo/Editorial';
-import { PhotoFashion } from './pages/photo/Fashion';
-import { PhotoReport  } from './pages/photo/Report';
-import { VideoEditorial } from './pages/video/Editorial';
-import { VideoFashion } from './pages/video/Fashion';
-import { VideoReport } from './pages/video/Report';
-import { VideoTravel } from './pages/video/Travel';
-import { PhotoTravel } from './pages/photo/Travel';
+import { PhotoEditorial } from './pages/photo/EditorialPhoto';
+import { PhotoFashion } from './pages/photo/FashionPhoto';
+import { PhotoReport  } from './pages/photo/ReportPhoto';
+import { VideoEditorial } from './pages/video/EditorialVideo';
+import { VideoFashion } from './pages/video/FashionVideo';
+import { VideoReport } from './pages/video/ReportVideo';
+import { VideoTravel } from './pages/video/TravelVideo';
+import { PhotoTravel } from './pages/photo/TravelPhoto';
 
 import "./styles/header.css"
 import "./styles/nav.css"

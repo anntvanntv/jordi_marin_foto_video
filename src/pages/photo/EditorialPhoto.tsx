@@ -1,12 +1,20 @@
 //  import { useState } from "react"; 
-import { useWebFotos } from "../../hooks/useWebFotos";
+import { useWordpress } from "../../hooks/useWordpress";   //cambiarlo por useWordpress
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "../../styles/pages.css";
 import React from "react";
 
+type WPPost = {
+  id: number;
+  title: { rendered: string };
+  _embedded?: {
+    "wp:featuredmedia"?: { source_url: string }[];
+  };
+}; 
+
 export const PhotoEditorial = () => {
-  const { editorial } = useWebFotos();
+  const editorial: WPPost[] = useWordpress("editorial-foto");
  const [ open, setOpen ] = React.useState(false);
  const [ currentIndex, setCurrentIndex ] = React.useState<number>(0); 
 
@@ -35,17 +43,16 @@ const openLightbox = (index: number) =>{
   
   return (
     <>
-
-
-
       <section className="gallery">
-        {editorial.map((src, i) => (
-          <div className="elemento" key={i} onClick={() => {
+        {editorial.map((item, i) => (
+          <div className="elemento" key={item.id} onClick={() => {
             openLightbox((i));
           
           }}>
             
-            <img src={src} alt={`foto ${i + 1}`} onLoad={handleImageLoad} />
+            <img src={item._embedded?.["wp:featuredmedia"]?.[0]?.source_url || ""} 
+            alt={item.title.rendered} 
+            onLoad={handleImageLoad} />
           </div>
         ))}
       </section>
@@ -54,7 +61,9 @@ const openLightbox = (index: number) =>{
         <Lightbox
           open={open}
           close={() => setOpen(false)}
-          slides={editorial.map((src) => ({src}))}
+          slides={editorial.map(item => ({
+            src: item._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "",
+          }))}
           index={currentIndex}
         />
       
