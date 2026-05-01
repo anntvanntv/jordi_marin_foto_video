@@ -16,8 +16,11 @@ export const useWpvideo = (tipo: string) => {
       const API = import.meta.env.VITE_WORDPRESS_API;
   
       fetch(`${API}/${tipo}?_embed&acf_format=standard`)
+      
         .then(res => res.json())
-        .then(data => setItems(data))
+        .then(data => {
+          console.log("RAW WP RESPONSE:", data);
+          setItems(data)})
         .catch(err => console.error(err));
     }, [tipo]);
   

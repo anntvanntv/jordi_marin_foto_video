@@ -31,7 +31,7 @@ export const VideoFashion = () => {
       <section className="gallery videogall">
          {fashion.map((item, i) => {
              const videoUrl = item.acf?.video_url;
-             console.log(videoUrl);
+             console.log("ITEM", item);
 
              return (
               <div 
