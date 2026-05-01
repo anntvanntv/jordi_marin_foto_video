@@ -37,8 +37,11 @@ main section {
     height: 170px;
     width: auto;
 }
-.horizontal img, .vertical img, .elemento video {
+.horizontal img, .vertical img {
    height: 100%;
+}
+.elemento video {
+    width: 100%;
 }
 .contain-home {
     width: 578px;
@@ -147,11 +150,6 @@ main section {
    
     .main-layout {
         margin-top: 68px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 100%;
-        min-height: 100dvh;
       }
    /*  .wrap {
         margin-top: 77px;
