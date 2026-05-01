@@ -20,12 +20,12 @@ export const PhotoFashion = () => {
 
   const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
         const { naturalWidth, naturalHeight } = e.currentTarget;
+        const parent = e.currentTarget.parentElement;
 
-        if (naturalWidth > naturalHeight) {
-          e.currentTarget.parentElement!.className = "horizontal";
-        } else {
-          e.currentTarget.parentElement!.className = "vertical";
-        }
+        if (!parent) return;
+
+        parent.classList.remove("horizontal", "vertical");
+        parent.classList.add(naturalWidth > naturalHeight ? "horizontal" : "vertical");
   }
 
   const openLightbox = (index: number) => {

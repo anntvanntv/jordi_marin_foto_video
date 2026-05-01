@@ -27,12 +27,23 @@ export const VideoFashion = () => {
       setOpen(true);
     }
 
+    const handleVideoLoad = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+      const { videoWidth, videoHeight } = e.currentTarget;
+      const parent = e.currentTarget.parentElement;
+
+      if (!parent) return;
+
+      parent.classList.remove("horizontal", "vertical");
+      parent.classList.add(videoWidth > videoHeight ? "horizontal" : "vertical");
+    };
+
+
   return (
     <>
       <section className="gallery videogall">
          {fashion.map((item, i) => {
              const videoUrl = item.acf?.video;
-             console.log("ITEM", item);
+             
 
              return (
               <div 
@@ -41,7 +52,12 @@ export const VideoFashion = () => {
               onClick={() => {
               openLightbox((i));
             }}>
-             <video src={`${videoUrl}#t=2` || ""} muted playsInline  preload="metadata"  />
+             <video src={`${videoUrl}#t=2` || ""} 
+             muted 
+             playsInline  
+             preload="metadata"
+             onLoadedMetadata={handleVideoLoad}
+               />
             </div>
             )})}
 
