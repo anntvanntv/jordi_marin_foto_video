@@ -1,5 +1,5 @@
 //  import { useState } from "react"; 
-import { useWordpress } from "../../hooks/useWordpress";   //cambiarlo por useWordpress
+import { useWordpress } from "../../hooks/useWordpress";   
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "../../styles/pages.css";

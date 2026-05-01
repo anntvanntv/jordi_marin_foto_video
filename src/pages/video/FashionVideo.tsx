@@ -1,4 +1,4 @@
-import { useWordpress } from "../../hooks/useWordpress";
+import { useWpvideo }  from "../../hooks/useWpvideo";
 import Lightbox from "yet-another-react-lightbox";
 import Video from "yet-another-react-lightbox/plugins/video";
 import "../../styles/pages.css";
@@ -8,9 +8,7 @@ import React from "react";
 type WPPost = {
   id: number;
   title: { rendered: string };
-  _embedded?: {
-    "wp:featuredmedia"?: { source_url: string }[];
-  };
+
   acf?: {
     video_url?: string;
   };
@@ -19,7 +17,7 @@ type WPPost = {
 
 export const VideoFashion = () => {
   
-    const fashion: WPPost[] = useWordpress("fashion-video");
+    const fashion: WPPost[] = useWpvideo("fashion-video");
     const [ open, setOpen ] = React.useState(false);
     const [ currentIndex, setCurrentIndex ] = React.useState<number>(0);
 
