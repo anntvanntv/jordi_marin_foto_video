@@ -144,9 +144,15 @@ main section {
     }
 }
  @media (max-width: 547px) {
+   
     .main-layout {
         margin-top: 68px;
-    }
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-height: 100dvh;
+      }
    /*  .wrap {
         margin-top: 77px;
     } */
