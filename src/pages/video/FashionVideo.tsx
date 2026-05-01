@@ -10,7 +10,8 @@ type WPPost = {
   title: { rendered: string };
 
   acf?: {
-    video_url?: string;
+    
+    video?: string;
   };
 };
 
@@ -30,7 +31,7 @@ export const VideoFashion = () => {
     <>
       <section className="gallery videogall">
          {fashion.map((item, i) => {
-             const videoUrl = item.acf?.video_url;
+             const videoUrl = item.acf?.video;
              console.log("ITEM", item);
 
              return (
@@ -52,7 +53,7 @@ export const VideoFashion = () => {
   close={() => setOpen(false)}
   index={currentIndex}
   slides={fashion.map((item) => {
-    const videoUrl = item.acf?.video_url;
+    const videoUrl = item.acf?.video;
 
     return {
       type: "video",

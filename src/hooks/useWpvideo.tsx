@@ -5,7 +5,7 @@ type WPPost = {
     title: { rendered: string };
     
     acf?: {
-      video_url?: string;
+      video?: string;
     };
   };
 
