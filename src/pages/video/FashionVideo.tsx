@@ -41,7 +41,7 @@ export const VideoFashion = () => {
               onClick={() => {
               openLightbox((i));
             }}>
-             <video src={`${videoUrl}#t=0.001` || ""} muted playsInline />
+             <video src={`${videoUrl}#t=2` || ""} muted playsInline  preload="metadata"  />
             </div>
             )})}
 
