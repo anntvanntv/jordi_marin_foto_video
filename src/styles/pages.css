@@ -173,5 +173,9 @@ main section {
     width:calc(400px - (540px - 100vw));
     height:auto;
 } 
+
+.elemento video {
+    width: 100%;
+}
 }
 
