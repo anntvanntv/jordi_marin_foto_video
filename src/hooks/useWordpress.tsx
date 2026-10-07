@@ -14,7 +14,7 @@ export const useWordpress = (tipo: string) => {
   useEffect(() => {
     const API = import.meta.env.VITE_WORDPRESS_API;
 
-    fetch(`${API}/${tipo}?_embed`)
+    fetch(`${API}/${tipo}?_embed&per_page=300`)
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.error(err));
