@@ -28,7 +28,7 @@ export const LeftNav: React.FC<LeftNavProps> = ({ setIsOpen, isOpen }) => {
                   <NavLink to="/photo/editorial">editorial</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/photo/fashion">fashion</NavLink>
+                  <NavLink to="/photo/fashion">object</NavLink>
                 </li>
               </ul>
               <h1>PERSONAL</h1>
